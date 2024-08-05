@@ -1,8 +1,8 @@
 # Dia 0
 - [x] Setup do Banco
-- [] Seeding do banco(inserir dados)
-- [] Introducao ao Next.js
-- [] Tailwind e Shadon
+- [x] Seeding do banco(inserir dados)
+- [x] Introducao ao Next.js
+- [x] Tailwind e Shadon
 - [] Git Hooks
 
 
