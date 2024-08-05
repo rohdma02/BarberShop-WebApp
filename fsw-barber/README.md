@@ -3,7 +3,7 @@
 - [x] Seeding do banco(inserir dados)
 - [x] Introducao ao Next.js
 - [x] Tailwind e Shadon
-- [] Git Hooks
+- [x] Git Hooks
 
 
 
