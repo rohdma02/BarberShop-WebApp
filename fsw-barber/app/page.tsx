@@ -1,12 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { Button } from "./_components/ui/button";
 
 
-//  SERVER COMPONENTS
 const Home = () => {
-  const [] = useState();
-  return <h1>Home</h1>;
+  return <Button>test</Button>
 }
 
 export default Home;
