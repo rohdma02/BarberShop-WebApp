@@ -1,3 +1,12 @@
+# Dia 0
+- [x] Setup do Banco
+- [] Seeding do banco(inserir dados)
+- [] Introducao ao Next.js
+- [] Tailwind e Shadon
+- [] Git Hooks
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
