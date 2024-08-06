@@ -14,6 +14,11 @@ import BarbershopItem from "./_components/ui/barbershop-item";
 
 const Home = async () => {
   const barbershops = await db.barbershop.findMany({})
+  const popularBarbershops = await db.barbershop.findMany({
+    orderBy: {
+      name: "desc",
+    }
+  })
 
   return (
     <div>
@@ -32,6 +37,15 @@ const Home = async () => {
           </Button>
         </div>
 
+
+        {/* BUSCA RAPIDA */}
+        <div className="flex gap-3 items-center mt-6 overflow-scroll [&::-webkit-scrollbar]:hidden">
+          <Button className="gap-2" variant={"secondary"}><Image alt="Corte" src="/cabelo.svg" width={16} height={16} />Cabelo</Button>
+          <Button className="gap-2" variant={"secondary"}><Image alt="Barba" src="/barba.svg" width={16} height={16} />Barba</Button>
+          <Button className="gap-2" variant={"secondary"}><Image alt="Acabamento" src="/acabamento.svg" width={16} height={16} />Acabamento</Button>
+          <Button className="gap-2" variant={"secondary"}><Image alt="Acabamento" src="/acabamento.svg" width={16} height={16} />Pezinho</Button>
+          <Button className="gap-2" variant={"secondary"}><Image alt="Acabamento" src="/acabamento.svg" width={16} height={16} />Sobrancelha</Button>
+        </div>
         {/* IMAGEM */}
         <div className="relative mt-6 h-[150px] w-full">
           <Image
@@ -75,7 +89,19 @@ const Home = async () => {
           {barbershops.map((barbershop) => (<BarbershopItem key={barbershop.id} barbershop={barbershop} />))}
         </div>
 
+        <h2 className="mb-3 mt-6 uppercase font-bold text-gray-400 text-xs">Populares</h2>
+        <div className="flex gap-4 overflow-auto [&::-webkit-scrollbar]:hidden">
+          {popularBarbershops.map((barbershop) => (<BarbershopItem key={barbershop.id} barbershop={barbershop} />))}
+        </div>
+
       </div>
+      <footer>
+        <Card>
+          <CardContent className="px-5 py-6">
+            <p className="text-sm text-gray-400">*2024 Copyright <span className="font-bold">FSW Barber</span></p>
+          </CardContent>
+        </Card>
+      </footer>
     </div>
   )
 }
